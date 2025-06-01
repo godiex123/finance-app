@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { SidebarInset } from '@/components/ui/sidebar';
+import { Toaster } from '@/components/ui/sonner';
 import { computed } from 'vue';
 
 interface Props {
@@ -16,6 +17,7 @@ const className = computed(() => props.class);
         <slot />
     </SidebarInset>
     <main v-else class="mx-auto flex h-full w-full max-w-7xl flex-1 flex-col gap-4 rounded-xl" :class="className">
+        <Toaster />
         <slot />
     </main>
 </template>

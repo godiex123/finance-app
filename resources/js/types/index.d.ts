@@ -35,5 +35,37 @@ export interface User {
     created_at: string;
     updated_at: string;
 }
-
 export type BreadcrumbItemType = BreadcrumbItem;
+
+export interface Category {
+    id: number;
+    name: string;
+    type: string;
+    deleted_at: string | null;
+}
+
+export interface Year {
+    id: number;
+}
+
+export interface Month {
+    id: number;
+    name: string;
+}
+
+export interface FixedIncome {
+    id: number;
+    category_id: number;
+    amount: number;
+    name: string;
+    comment: string;
+}
+
+export interface FixedExpense {
+    id: number;
+    category_id: number;
+    amount: number;
+    name: string;
+    is_essential: boolean;
+    comment: string;
+}

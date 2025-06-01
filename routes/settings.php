@@ -4,6 +4,9 @@ use App\Http\Controllers\Settings\PasswordController;
 use App\Http\Controllers\Settings\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Settings\YearController;
+use App\Http\Controllers\Settings\MonthController;
+use App\Http\Controllers\Settings\CategoryController;
 
 Route::middleware('auth')->group(function () {
     Route::redirect('settings', '/settings/profile');
@@ -18,4 +21,6 @@ Route::middleware('auth')->group(function () {
     Route::get('settings/appearance', function () {
         return Inertia::render('settings/Appearance');
     })->name('appearance');
+
+    Route::resource('settings/category', CategoryController::class)->only(['index', 'store', 'update', 'destroy']);
 });
