@@ -26,10 +26,10 @@ class ListUsers extends Command
      */
     public function handle()
     {
-        $users = User::select('email');
+        $users = User::all();
         $this->info('Usuarios:');
-        foreach ($users as $email) {
-            $this->line($email);
+        foreach ($users as $user) {
+            $this->line($user->email);
         }
     }
 }
