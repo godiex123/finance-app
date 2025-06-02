@@ -285,8 +285,8 @@ const submitTransaction = () => {
                                                                     </SelectTrigger>
                                                                     <SelectContent>
                                                                         <SelectGroup>
-                                                                            <SelectItem v-for="categoryIncome in categoriesIncome" :key="categoryIncome.id" :value="categoryIncome.id">
-                                                                                {{ categoryIncome.name }}
+                                                                            <SelectItem v-for="incomeCategory in incomeCategories" :key="incomeCategory.id" :value="incomeCategory.id">
+                                                                                {{ incomeCategory.name }}
                                                                             </SelectItem>
                                                                         </SelectGroup>
                                                                     </SelectContent>
@@ -395,8 +395,8 @@ const submitTransaction = () => {
                                                                 </SelectTrigger>
                                                                 <SelectContent>
                                                                     <SelectGroup>
-                                                                        <SelectItem v-for="categoryExpense in categoriesExpense" :key="categoryExpense.id" :value="categoryExpense.id">
-                                                                            {{ categoryExpense.name }}
+                                                                        <SelectItem v-for="expenseCategory in expenseCategories" :key="expenseCategory.id" :value="expenseCategory.id">
+                                                                            {{ expenseCategory.name }}
                                                                         </SelectItem>
                                                                     </SelectGroup>
                                                                 </SelectContent>

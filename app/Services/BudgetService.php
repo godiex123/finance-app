@@ -9,6 +9,7 @@ use App\Models\FixedExpense;
 use App\Models\BudgetedIncome;
 use App\Models\BudgetedExpense;
 use App\Models\Transaction;
+use Exception;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
 use App\Constants\Months;
